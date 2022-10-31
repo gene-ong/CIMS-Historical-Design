@@ -69,6 +69,9 @@ End With
 'Sort Pivot Table by Rating
 ActiveSheet.PivotTables("MaterialPivotTable").PivotFields("SPN").AutoSort Order:=xlDescending, Field:="Rating"
 
+'Set Sheet Tab Colour
+ActiveSheet.Tab.Color = RGB(25, 25, 25)
+
 'Format Pivot Table
 ActiveSheet.PivotTables("MaterialPivotTable").ShowTableStyleRowStripes = True
 ActiveSheet.PivotTables("MaterialPivotTable").TableStyle2 = "PivotStyleMedium9"
@@ -140,6 +143,9 @@ End With
 'Sort Pivot Table by Rating
 ActiveSheet.PivotTables("BOQPivotTable").PivotFields("BOQ").AutoSort Order:=xlDescending, Field:="Rating"
 
+'Set Sheet Tab Colour
+ActiveSheet.Tab.Color = RGB(25, 25, 25)
+
 'Format Pivot Table
 ActiveSheet.PivotTables("BOQPivotTable").ShowTableStyleRowStripes = True
 ActiveSheet.PivotTables("BOQPivotTable").TableStyle2 = "PivotStyleMedium9"
@@ -210,6 +216,9 @@ End With
 
 'Sort Pivot Table by Rating
 ActiveSheet.PivotTables("MISCPivotTable").PivotFields("MISC").AutoSort Order:=xlDescending, Field:="Rating"
+
+'Set Sheet Tab Colour
+ActiveSheet.Tab.Color = RGB(25, 25, 25)
 
 'Format Pivot Table
 ActiveSheet.PivotTables("MISCPivotTable").ShowTableStyleRowStripes = True
