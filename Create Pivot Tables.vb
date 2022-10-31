@@ -5,6 +5,13 @@ InsertBOQPivotTable
 InsertMISCPivotTable
 End Sub
 
+Sub RunWithoutRefresh()
+InsertMaterialPivotTable
+InsertBOQPivotTable
+InsertMISCPivotTable
+End Sub
+
+
 Sub InsertMaterialPivotTable()
 
 Dim PSheet As Worksheet
@@ -18,6 +25,12 @@ Dim LastCol As Long
 'Declare Variables
 On Error Resume Next
 Application.DisplayAlerts = False
+
+'Set the Pivot column to 1
+Sheets("Project Materials").Activate
+Sheets("Project Materials").Range(Cells(2, 7), Cells(Sheets("Project Materials").ListObjects("Project_Materials").Range.Rows.Count, 7)).Value = 1
+Sheets("Start here").Activate
+
 Worksheets("PivotTableMaterial").Delete
 Sheets.Add Before:=ActiveSheet
 ActiveSheet.Name = "PivotTableMaterial"
@@ -92,6 +105,12 @@ Dim LastCol As Long
 'Declare Variables
 On Error Resume Next
 Application.DisplayAlerts = False
+
+'Set the Pivot column to 1
+Sheets("Project BOQ").Activate
+Sheets("Project BOQ").Range(Cells(2, 3), Cells(Sheets("Project BOQ").ListObjects("Project_BOQ").Range.Rows.Count, 3)).Value = 1
+Sheets("Start here").Activate
+
 Worksheets("PivotTableBOQ").Delete
 Sheets.Add Before:=ActiveSheet
 ActiveSheet.Name = "PivotTableBOQ"
@@ -166,6 +185,12 @@ Dim LastCol As Long
 'Declare Variables
 On Error Resume Next
 Application.DisplayAlerts = False
+
+'Set the Pivot column to 1
+Sheets("Project MISC").Activate
+Sheets("Project MISC").Range(Cells(2, 11), Cells(Sheets("Project MISC").ListObjects("Project_MISC").Range.Rows.Count, 11)).Value = 1
+Sheets("Start here").Activate
+
 Worksheets("PivotTableMISC").Delete
 Sheets.Add Before:=ActiveSheet
 ActiveSheet.Name = "PivotTableMISC"
