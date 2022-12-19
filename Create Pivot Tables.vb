@@ -26,9 +26,19 @@ Dim LastCol As Long
 On Error Resume Next
 Application.DisplayAlerts = False
 
-'Set the Pivot column to 1
+'Activate Sheet
 Sheets("Project Materials").Activate
+ ActiveSheet.Cells(1, 1).Select
+
+'Remove Filters if there are any
+If (Sheets("Project Materials").AutoFilterMode And Sheets("Project Materials").FilterMode) Or Sheets("Project Materials").FilterMode Then
+    Sheets("Project Materials").ShowAllData
+End If
+
+'Set the Pivot column to 1
 Sheets("Project Materials").Range(Cells(2, 7), Cells(Sheets("Project Materials").ListObjects("Project_Materials").Range.Rows.Count, 7)).Value = 1
+
+'Activate Sheet
 Sheets("Start here").Activate
 
 Worksheets("PivotTableMaterial").Delete
@@ -106,9 +116,19 @@ Dim LastCol As Long
 On Error Resume Next
 Application.DisplayAlerts = False
 
-'Set the Pivot column to 1
+'Activate Sheet
 Sheets("Project BOQ").Activate
-Sheets("Project BOQ").Range(Cells(2, 3), Cells(Sheets("Project BOQ").ListObjects("Project_BOQ").Range.Rows.Count, 3)).Value = 1
+ActiveSheet.Cells(1, 1).Select
+
+'Remove Filters if there are any
+If (Sheets("Project BOQ").AutoFilterMode And Sheets("Project BOQ").FilterMode) Or Sheets("Project BOQ").FilterMode Then
+    Sheets("Project BOQ").ShowAllData
+End If
+
+'Set the Pivot column to 1
+Sheets("Project BOQ").Range(Cells(2, 4), Cells(Sheets("Project BOQ").ListObjects("Project_BOQ").Range.Rows.Count, 4)).Value = 1
+
+'Activate Sheet
 Sheets("Start here").Activate
 
 Worksheets("PivotTableBOQ").Delete
@@ -186,9 +206,19 @@ Dim LastCol As Long
 On Error Resume Next
 Application.DisplayAlerts = False
 
-'Set the Pivot column to 1
+'Activate Sheet
 Sheets("Project MISC").Activate
+ActiveSheet.Cells(1, 1).Select
+
+'Remove Filters if there are any
+If (Sheets("Project MISC").AutoFilterMode And Sheets("Project MISC").FilterMode) Or Sheets("Project MISC").FilterMode Then
+    Sheets("Project MISC").ShowAllData
+End If
+
+'Set the Pivot column to 1
 Sheets("Project MISC").Range(Cells(2, 11), Cells(Sheets("Project MISC").ListObjects("Project_MISC").Range.Rows.Count, 11)).Value = 1
+
+'Activate Sheet
 Sheets("Start here").Activate
 
 Worksheets("PivotTableMISC").Delete
@@ -266,9 +296,19 @@ Dim LastCol As Long
 On Error Resume Next
 Application.DisplayAlerts = False
 
-'Set the Pivot column to 1
+'Activate Sheet
 Sheets("Project Materials (2)").Activate
+ActiveSheet.Cells(1, 1).Select
+
+'Remove Filters if there are any
+If (Sheets("Project Materials (2)").AutoFilterMode And Sheets("Project Materials (2)").FilterMode) Or Sheets("Project Materials (2)").FilterMode Then
+    Sheets("Project Materials (2)").ShowAllData
+End If
+
+'Set the Pivot column to 1
 Sheets("Project Materials (2)").Range(Cells(2, 7), Cells(Sheets("Project Materials (2)").ListObjects("Project_Materials__2").Range.Rows.Count, 7)).Value = 1
+
+'Activate Sheet
 Sheets("Start here").Activate
 
 Worksheets("PivotTableMaterial").Delete
@@ -346,9 +386,19 @@ Dim LastCol As Long
 On Error Resume Next
 Application.DisplayAlerts = False
 
-'Set the Pivot column to 1
+'Activate Sheet
 Sheets("Project BOQ (2)").Activate
-Sheets("Project BOQ (2)").Range(Cells(2, 3), Cells(Sheets("Project BOQ (2)").ListObjects("Project_BOQ__2").Range.Rows.Count, 3)).Value = 1
+ActiveSheet.Cells(1, 1).Select
+
+'Remove Filters if there are any
+If (Sheets("Project BOQ (2)").AutoFilterMode And Sheets("Project BOQ (2)").FilterMode) Or Sheets("Project BOQ (2)").FilterMode Then
+    Sheets("Project BOQ (2)").ShowAllData
+End If
+
+'Set the Pivot column to 1
+Sheets("Project BOQ (2)").Range(Cells(2, 4), Cells(Sheets("Project BOQ (2)").ListObjects("Project_BOQ__2").Range.Rows.Count, 4)).Value = 1
+
+'Activate Sheet
 Sheets("Start here").Activate
 
 Worksheets("PivotTableBOQ").Delete
@@ -426,9 +476,19 @@ Dim LastCol As Long
 On Error Resume Next
 Application.DisplayAlerts = False
 
-'Set the Pivot column to 1
+'Activate Sheet
 Sheets("Project MISC (2)").Activate
+ActiveSheet.Cells(1, 1).Select
+
+'Remove Filters if there are any
+If (Sheets("Project MISC (2)").AutoFilterMode And Sheets("Project MISC (2)").FilterMode) Or Sheets("Project MISC (2)").FilterMode Then
+    Sheets("Project MISC (2)").ShowAllData
+End If
+
+'Set the Pivot column to 1
 Sheets("Project MISC (2)").Range(Cells(2, 11), Cells(Sheets("Project MISC (2)").ListObjects("Project_MISC__2").Range.Rows.Count, 11)).Value = 1
+
+'Activate Sheet
 Sheets("Start here").Activate
 
 Worksheets("PivotTableMISC").Delete
